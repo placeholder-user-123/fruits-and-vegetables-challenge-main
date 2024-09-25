@@ -32,16 +32,6 @@ or
 ## 🐳 Docker image
 Optional. Just here if you want to run it isolated.
 
-### 📥 Pulling image
-```bash
-docker pull tturkowski/fruits-and-vegetables
-```
-
-### 🧱 Building image
-```bash
-docker build -t tturkowski/fruits-and-vegetables -f docker/Dockerfile .
-```
-
 ### 🏃‍♂️ Running Docker compose
 ```bash
 docker-compose up -d 
