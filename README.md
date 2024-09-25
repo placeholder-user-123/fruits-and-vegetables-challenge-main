@@ -42,18 +42,21 @@ docker pull tturkowski/fruits-and-vegetables
 docker build -t tturkowski/fruits-and-vegetables -f docker/Dockerfile .
 ```
 
+### 🏃‍♂️ Running Docker compose
+```bash
+docker-compose up -d 
+```
 ### 🏃‍♂️ Running container
 ```bash
-docker run -it -w/app -v$(pwd):/app tturkowski/fruits-and-vegetables sh 
+docker-compose exec app bash
 ```
 
 ### 🛂 Running tests
 ```bash
-docker run -it -w/app -v$(pwd):/app tturkowski/fruits-and-vegetables bin/phpunit
+docker-compose exec app bin/phpunit
 ```
 
-### ⌨️ Run development server
+### ⌨️ Running migrations
 ```bash
-docker run -it -w/app -v$(pwd):/app -p8080:8080 tturkowski/fruits-and-vegetables php -S 0.0.0.0:8080 -t /app/public
-# Open http://127.0.0.1:8080 in your browser
+docker-compose exec app bin/console doctrine:migrations:migrate
 ```
