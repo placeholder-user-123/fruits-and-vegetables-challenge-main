@@ -1,0 +1,3 @@
+<?php //App%255CController%255CProduceController%2523getJsonErrors
+
+return [PHP_INT_MAX, []];
