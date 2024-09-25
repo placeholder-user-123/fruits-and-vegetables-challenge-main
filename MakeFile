@@ -1,0 +1,18 @@
+
+up:
+	docker-compose up -d
+
+down:
+	docker-compose down
+
+build:
+	docker-compose build
+
+composer-install:
+	docker-compose run --rm composer install
+
+test:
+	docker-compose exec app bin/phpunit
+
+bash:
+	docker-compose exec app bash
